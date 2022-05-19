@@ -1,0 +1,405 @@
+/* CSS reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navigation-height: 60px;
+}
+
+/* Navigation Bar */
+#navbar{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    height: 60px;
+    width: 100%;
+}
+
+#navbar .fa-user{
+    color: #fff;
+    margin-left: 800px;
+    margin-bottom: 18px;
+    /* margin-top: 30px; */
+    font-size: 24px;
+}
+
+#navbar::before{
+    content: "";
+    height: 100%;
+    background-color:rgba(46, 9, 9, 0.541); 
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    /* opacity: 0.5; */
+}
+
+/* Navigation Bar : Logo and img*/
+#logo{
+    margin: 7px 7px;
+}
+
+#logo img{
+ height: 53px;
+ margin: 7px 7px;
+ width: 56px;
+}
+
+
+/*Navigation Bar: List Items*/
+#navbar ul{
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li{
+    font-size: 1.15rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    border-radius: 20px;
+    padding: 0px 10px;
+    text-decoration: none;
+    font-family: 'Baloo Tamma 2', cursive;
+    margin: 4px;
+
+}
+#navbar ul li a:hover{
+    color: blue;
+    background-color: white;
+}
+
+/*Dropdown menu css*/
+#navbar li:hover .submenu > li{
+    display: block;
+    flex-direction: column;
+    top: 0px;
+}
+
+.submenu li{
+    display: none;
+    position: absolute;
+    top: 0px;
+}
+
+.submenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 7%;
+    background-color:rgba(49, 11, 11, 0.541);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.submenu li{
+    position: relative;
+}
+
+.arrow{
+    margin-left: 3px;
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+/*Home Section*/
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    padding: 3px 240px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background: url('../c_img.jpg') no-repeat center center/cover;
+    height: 520px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.90;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Baloo Tamma 2', cursive;
+    padding-top: 80px;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Bree Serif', serif;
+}
+
+
+/*About Us section*/
+#about-us{
+    margin: 20px 17px;
+    padding-top: 50px;
+    position: relative;
+    height: 378px ;
+    font-size: large;
+    color: #fff;
+}
+
+#about-us p{
+    margin-left: 27px;
+    font-size: 1.15rem;
+}
+
+#about-us h1{
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding-bottom: 19px;
+}
+
+#about-us button{
+    margin-right: 20px;
+}
+
+#about-us::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right,#3f2320,transparent),url('../ab.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+    /* opacity: 0.90; */
+    border-radius: 10px;
+}
+
+#about-us .btn{
+    margin-left: 210px;
+    font-size: 0.9rem;
+    width: 118px;
+}
+
+#services{
+    margin: 0px 17px;
+    display: flex;
+    padding-top: 8px;
+}
+
+#services .box{
+    border: 2px solid transparent;
+    margin: 9px;
+    padding: 1px 14px;
+    border-radius: 20px;      
+}
+
+#services .box img{
+    height: 250px;
+    width: 320px;
+    display: block;
+    margin: auto;
+    padding: 5px 1px;
+    border-radius: 20px;
+}
+ 
+
+#services h2{
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+#services-cont h1{
+    padding-bottom: 0px;
+     font-size: 2.7rem;
+     margin-bottom: 0px;
+     margin-top: 50px;
+}
+
+
+
+/*Clients section*/
+
+#clients{
+    margin: 0px 10px;
+    display: flex;
+    padding-top: 5px;
+}
+
+#clients .box1{
+    border: 2px solid rgb(218, 25, 25); 
+    margin: 10px;
+    padding: 1px 14px;
+    border-radius: 20px;
+    width: 360px;
+}
+
+#clients .box1 img{
+    height: 110px;
+    width: 220px;
+    display: block;
+    margin: auto;
+    padding: 0px 0px;
+    border-radius: 20px;
+}
+
+#client-section h1{
+    font-size: 2.7rem;
+    margin-top: 30px;
+}
+
+#clients p{
+    padding: 15px;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 0.99rem;
+}
+
+/*
+#clients img{
+    margin: 15px;
+    height: 18px;
+    width: 30px;
+}
+
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 87%;
+    z-index: -1;
+    opacity: 0.45;
+}
+*/
+
+/*Contact Section*/
+#contact h1{
+    font-size: 2.7rem;
+    padding-top: 17px;
+    margin-top: 36px;
+}
+
+#contact{
+    position: relative;  
+   margin-top: 69px;
+   margin-left: 17px;
+   margin-right: 17px;
+   margin-bottom: 10px;
+    height: 440px;
+    /* padding-top: 10px; */
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.55;
+    background: url('../contact.jpg') no-repeat center center/cover;
+    border-radius: 15px;
+}
+
+/*#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#contact-box form{
+    width: 28%;
+}
+
+#contact-box label{
+    font-size: 1.1rem;
+    font-family: 'Bree Serif', serif;
+}
+
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.2rem;
+    border-radius: 13px;
+    font-size: 1rem;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 2px 19px;
+}
+
+#contact-box .btn{
+    margin-left: 160px;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 37px;
+    font-size: 0.9rem;
+}
+
+*/
+
+.fa-solid{
+    color: rgb(20, 20, 20);
+    margin-left: 80px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+#contact-box p{
+    font-size: 1.14rem;
+    font-weight: bold;
+}
+
+
+
+/*Utility classes*/
+.h-primary{
+    font-size: 2.6rem;
+    padding: 9px;
+    font-weight: bold;
+    font-family: 'Baloo Tamma 2', cursive;
+    text-align: center;
+}
+
+.h-secondary{
+    font-size: 1.4rem;
+    padding: 1px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(214, 124, 124);
+    color: white;
+    margin: 19px;
+    font-size: 1.04rem;
+    border-radius: 19px;
+    cursor: pointer;
+    font-family: 'Bree Serif', serif;
+}
+
+.btn:hover{
+    background-color: white;
+    color: blue;
+}
+
+.center{
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 23px;
+}
